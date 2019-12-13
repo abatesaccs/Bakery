@@ -38,13 +38,6 @@ namespace products.bread
       price *= _Price;
       return price;
       }
-      // while(loaves > 1)
-      // {
-      //   if(loaves >= 2)
-      //   {
-
-      //   }
-      // }
     }
   }
 }
