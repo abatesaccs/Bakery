@@ -36,6 +36,10 @@ namespace Bakery
       {
         Console.WriteLine("   Pastry: $" + Pastry.buyPastry(numPastry));
       }
+      Console.WriteLine(Bread.getOrderPrice() + Pastry.getOrderPrice());
+      Console.WriteLine("\nPress any key to exit");
+      Console.ReadKey();
+      return;
     }
   }
 }

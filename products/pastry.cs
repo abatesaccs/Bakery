@@ -7,6 +7,7 @@ namespace products.pastry
     public int _Stock;
     public static int _Price;
     public static int _DealPrice;
+    private static int _OrderPrice;
     public Pastry(int stock, int price, int dealPrice)
     {
       _Stock = stock;
@@ -21,6 +22,10 @@ namespace products.pastry
     {
       return _Price;
     }
+    public static int getOrderPrice()
+    {
+      return _OrderPrice;
+    }
     public static void setPrice(int price)
     {
       _Price = price;
@@ -34,6 +39,7 @@ namespace products.pastry
       int price = (num % 3) * _Price;
       num -= num % 3;
       price += (int)(Math.Ceiling((double)num / 3) * _DealPrice);
+      _OrderPrice = price;
       return price;
     }
   }
