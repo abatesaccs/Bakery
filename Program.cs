@@ -10,6 +10,7 @@ namespace Bakery
     public static void Main()
     {
       Bread breadStock = new Bread(30, 5);
+      Pastry PastryStock = new Pastry(30, 2, 5);
       Console.WriteLine("Menu:\n Bread: $" + Bread.getPrice());
       Console.WriteLine("Enter Order:");
       Console.WriteLine("How many loaves of bread would you like?");
@@ -19,7 +20,7 @@ namespace Bakery
       string pastryOrder = Console.ReadLine();
       bool isPastryInt = int.TryParse(pastryOrder, out int numPastry);
 
-      if (numBread >= 1 && isInt)
+      if (numBread >= 1 && isBreadInt)
       {
         Console.WriteLine("Your order comes to,\n   Bread: $" + Bread.buyLoaves(numBread));
       }
@@ -31,9 +32,9 @@ namespace Bakery
         Main();
       }
 
-      if (numPastry >= 1 && isInt)
+      if (numPastry >= 1 && isPastryInt)
       {
-        Console.WriteLine("   Pastry: $" + Bread.buyPastry(numPastry));
+        Console.WriteLine("   Pastry: $" + Pastry.buyPastry(numPastry));
       }
       else
       {
