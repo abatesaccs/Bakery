@@ -5,7 +5,7 @@ namespace products.bread
   public class Bread
   {
     private int _Loaves;
-    private int _Price;
+    private static int _Price;
     public Bread(int loaves, int price)
     {
       _Loaves = loaves;
@@ -15,9 +15,32 @@ namespace products.bread
     {
       return _Loaves;
     }
-    public int buyLoaves(int loaves)
+    public void setLoaves(int loaves)
     {
+      _Loaves = loaves;
+    }
+    public static int buyLoaves(int loaves)
+    {
+      int numSold = loaves;
+      int price = 1;
+      if(loaves == 1)
+      {
+        price *= _Price;
+        return (int)price;
+      }
+      else
+      {
+      price = (int)Math.Ceiling((double)loaves / 3 * 2);
+      price *= _Price;
+      return price;
+      }
+      // while(loaves > 1)
+      // {
+      //   if(loaves >= 2)
+      //   {
 
+      //   }
+      // }
     }
   }
 }
