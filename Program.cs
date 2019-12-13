@@ -36,10 +36,21 @@ namespace Bakery
       {
         Console.WriteLine("   Pastry: $" + Pastry.buyPastry(numPastry));
       }
-      Console.WriteLine(Bread.getOrderPrice() + Pastry.getOrderPrice());
+      Console.WriteLine(Total(Bread.getOrderPrice(), Pastry.getOrderPrice()));
       Console.WriteLine("\nPress any key to exit");
       Console.ReadKey();
       return;
+    }
+    public static string Total(int bread, int pastry)
+    {
+      if (bread == 0)
+      {
+        return "   Total: $" + pastry;
+      } else if(pastry == 0) {
+        return "   Total: $" + bread;
+      } else {
+        return "   Total: $" + bread + pastry;
+      }
     }
   }
 }
