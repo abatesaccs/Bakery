@@ -14,10 +14,26 @@ namespace Bakery
       Console.WriteLine("Enter Order:");
       Console.WriteLine("How many loaves of bread would you like?");
       string breadOrder = Console.ReadLine();
-      bool isInt = int.TryParse(breadOrder, out int n);
-      if (n >= 1 && isInt)
+      bool isBreadInt = int.TryParse(breadOrder, out int numBread);
+      Console.WriteLine("How many pastries would you like?");
+      string pastryOrder = Console.ReadLine();
+      bool isPastryInt = int.TryParse(pastryOrder, out int numPastry);
+
+      if (numBread >= 1 && isInt)
       {
-        Console.WriteLine("Your order comes to,\n   Bread: $" + Bread.buyLoaves(n));
+        Console.WriteLine("Your order comes to,\n   Bread: $" + Bread.buyLoaves(numBread));
+      }
+      else
+      {
+        Thread.Sleep(750);
+        Console.WriteLine("\nPlease enter a number\n");
+        Thread.Sleep(750);
+        Main();
+      }
+
+      if (numPastry >= 1 && isInt)
+      {
+        Console.WriteLine("   Pastry: $" + Bread.buyPastry(numPastry));
       }
       else
       {
