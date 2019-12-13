@@ -32,6 +32,7 @@ namespace products.pastry
     public static int buyPastry(int num)
     {
       int price = (num % 3) * _Price;
+      num -= num % 3;
       price += (int)(Math.Ceiling((double)num / 3) * _DealPrice);
       return price;
     }
