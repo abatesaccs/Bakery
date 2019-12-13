@@ -15,6 +15,10 @@ namespace products.bread
     {
       return _Loaves;
     }
+    public static int getPrice()
+    {
+      return _Price;
+    }
     public void setLoaves(int loaves)
     {
       _Loaves = loaves;

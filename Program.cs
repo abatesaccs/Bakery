@@ -10,12 +10,14 @@ namespace Bakery
     public static void Main()
     {
       Bread breadStock = new Bread(30, 5);
-      Console.WriteLine("enter number of breads");
+      Console.WriteLine("Menu:\n Bread: $" + Bread.getPrice());
+      Console.WriteLine("Enter Order:");
+      Console.WriteLine("How many loaves of bread would you like?");
       string breadOrder = Console.ReadLine();
       bool isInt = int.TryParse(breadOrder, out int n);
       if (n >= 1 && isInt)
       {
-        Console.WriteLine("Your order comes to, Bread: $" + Bread.buyLoaves(n));
+        Console.WriteLine("Your order comes to,\n   Bread: $" + Bread.buyLoaves(n));
       }
       else
       {
