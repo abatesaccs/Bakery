@@ -11,7 +11,7 @@ namespace Bakery
     {
       Bread breadStock = new Bread(30, 5);
       Pastry PastryStock = new Pastry(30, 2, 5);
-      Console.WriteLine("Menu:\n Bread: $" + Bread.getPrice() + "\n Pastries: $" + Pastry.getPrice());
+      Console.WriteLine("Menu:\n Bread: $" + Bread.Price + "\n Pastries: $" + Pastry.Price);
       Console.WriteLine("\nEnter Order:");
       Console.WriteLine("\nHow many loaves of bread would you like?");
       string breadOrder = Console.ReadLine();
@@ -36,22 +36,15 @@ namespace Bakery
       {
         Console.WriteLine("   Pastry: $" + Pastry.buyPastry(numPastry));
       }
-      Console.WriteLine(Total(Bread.getOrderPrice(), Pastry.getOrderPrice()));
+      Console.WriteLine(Total(Bread.OrderPrice, Pastry.OrderPrice));
       Console.WriteLine("\nPress any key to exit");
       Console.ReadKey();
       return;
     }
     public static string Total(int bread, int pastry)
     {
-      // if (bread == 0)
-      // {
-      //   return "   Total: $" + pastry;
-      // } else if(pastry == 0) {
-      //   return "   Total: $" + bread;
-      // } else {
-        int total = bread + pastry;
-        return "   Total: $" + total;
-      // }
+      int total = bread + pastry;
+      return "   Total: $" + total;
     }
   }
 }
