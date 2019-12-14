@@ -4,9 +4,9 @@ namespace products.pastry
 {
   public class Pastry
   {
-    public int _Stock;
-    public static int _Price;
-    public static int _DealPrice;
+    private int _Stock;
+    private static int _Price;
+    private static int _DealPrice;
     private static int _OrderPrice;
     public Pastry(int stock, int price, int dealPrice)
     {

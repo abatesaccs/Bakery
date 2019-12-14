@@ -43,14 +43,15 @@ namespace Bakery
     }
     public static string Total(int bread, int pastry)
     {
-      if (bread == 0)
-      {
-        return "   Total: $" + pastry;
-      } else if(pastry == 0) {
-        return "   Total: $" + bread;
-      } else {
-        return "   Total: $" + bread + pastry;
-      }
+      // if (bread == 0)
+      // {
+      //   return "   Total: $" + pastry;
+      // } else if(pastry == 0) {
+      //   return "   Total: $" + bread;
+      // } else {
+        int total = bread + pastry;
+        return "   Total: $" + total;
+      // }
     }
   }
 }
